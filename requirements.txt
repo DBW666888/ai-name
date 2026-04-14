@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+fastapi-mail==1.5.0
+aiosmtplib
+aiomysql
+alembic
+sqlalchemy>=2.0.0
+cryptography
+pydantic[email]>=2.0.0
+pwdlib[argon2]
+pydantic-settings
