@@ -1,16 +1,16 @@
 from datetime import timedelta
 
-DB_URI = "mysql+aiomysql://root:2b2b123123@127.0.0.1:3306/ai-name?charset=utf8mb4"
+DB_URI = "mysql+aiomysql://root:your_password@127.0.0.1:3306/ai-name?charset=utf8mb4"
 
 
 
 # 邮箱相关配置
-MAIL_USERNAME="3506185106@qq.com"
+MAIL_USERNAME="your_email@qq.com"
 MAIL_PASSWORD="xfzqikmjociaciga"
-MAIL_FROM="3506185106@qq.com"
+MAIL_FROM="your_email@qq.com"
 MAIL_PORT=587
 MAIL_SERVER="smtp.qq.com"
-MAIL_FROM_NAME="dbw"
+MAIL_FROM_NAME="your_name"
 MAIL_STARTTLS=True
 MAIL_SSL_TLS=False
 

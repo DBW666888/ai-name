@@ -10,11 +10,11 @@ Accept: application/json
 
 ###
 #给邮箱发送信息
-GET http://127.0.0.1:8000/mail/test?email=3506185106@qq.com
+GET http://127.0.0.1:8000/mail/test?email=your_email@qq.com
 
 ###
 #邮箱接收验证码
-GET http://127.0.0.1:8000/auth/code?email=3506185106@qq.com
+GET http://127.0.0.1:8000/auth/code?email=your_email@qq.com
 
 ###
 
@@ -22,11 +22,11 @@ POST http://127.0.0.1:8000/auth/register
 Content-Type: application/json
 
 {
-  "email": "3506185106@qq.com",
-  "username": "dbw666",
-  "password": "123456",
-  "confirm_password": "123456",
-  "code": "0549"
+  "email": "your_email@qq.com",
+  "username": "your_username",
+  "password": "your_password",
+  "confirm_password": "your_password",
+  "code": "your_code"
 }
 
 
@@ -36,8 +36,8 @@ POST http://127.0.0.1:8000/auth/login
 Content-Type: application/json
 
 {
-  "email": "3506185106@qq.com",
-  "password": "123456"
+  "email": "your_email@qq.com",
+  "password": "your_password"
 }
 
 

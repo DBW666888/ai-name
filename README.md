@@ -51,15 +51,27 @@ cd ai-name
 ```
 
 ### 2. 后端配置
+
 1. **安装依赖**:
    ```bash
    pip install -r requirements.txt
    ```
-2. **配置环境变量**:
-   修改 `settings/__init__.py` 中的配置，包括：
-   - `DB_URI`: MySQL 连接字符串
-   - `MAIL_USERNAME` / `MAIL_PASSWORD`: 发件邮箱及授权码
-   - `DeepSeek API Key`: 在 `core/agent.py` 中配置您的 API Key
+
+2. **修改关键配置**:
+   为了使项目正常运行，您**必须**修改以下文件中的个人配置信息：
+
+   #### 📧 邮箱配置 ([settings/__init__.py](file:///e:/AI%20development/ai_project/ai-name/settings/__init__.py))
+   - `MAIL_USERNAME`: 您的发件人邮箱地址（如 QQ 邮箱）。
+   - `MAIL_PASSWORD`: 您的邮箱 SMTP 授权码（非登录密码）。
+   - `MAIL_FROM`: 发件人邮箱地址。
+   - `MAIL_FROM_NAME`: 发件人显示名称。
+
+   #### 🗄️ 数据库配置 ([settings/__init__.py](file:///e:/AI%20development/ai_project/ai-name/settings/__init__.py))
+   - `DB_URI`: 按照格式 `mysql+aiomysql://用户名:密码@地址:端口/数据库名` 修改为您的数据库连接。
+
+   #### 🔑 安全与 AI 配置
+   - **JWT 密钥** ([settings/__init__.py](file:///e:/AI%20development/ai_project/ai-name/settings/__init__.py)): 修改 `JWT_SECRET_KEY` 为一个随机的长字符串以确保 Token 安全。
+   - **DeepSeek API Key** ([core/agent.py](file:///e:/AI%20development/ai_project/ai-name/core/agent.py)): 在初始化 `ChatDeepSeek` 时填入您从 DeepSeek 官网获取的 `api_key`。
 
 3. **数据库迁移**:
    ```bash

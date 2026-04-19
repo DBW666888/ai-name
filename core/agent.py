@@ -10,7 +10,7 @@ from schemas.name import NameIn
 # 初始化 LLM
 llm = ChatDeepSeek(
     model="deepseek-chat",
-    api_key=SecretStr("sk-78584476a431453dad1dabedb14395b3"),
+    api_key=SecretStr("your_api_key"),
     temperature=1,
 )
 
